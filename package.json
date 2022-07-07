@@ -6,7 +6,7 @@
   "scripts": {
     "codegen": "graph codegen --output-dir src/types/",
     "build": "graph build",
-    "deploy": "graph deploy  --access-token 59eafc0aeb2946e2bca764748ee401cb mnkhod/ardmoney-chapel-v3-subgraph --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/ --debug",
+    "deploy": "graph deploy  --access-token 59eafc0aeb2946e2bca764748ee401cb mnkhod/ardmoney-bnb-v1-subgraph --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/ --debug",
     "all": "yarn codegen && yarn build && yarn deploy"
   },
   "devDependencies": {

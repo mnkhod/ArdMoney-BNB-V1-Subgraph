@@ -3,8 +3,9 @@ import { Pair, Token, Bundle } from '../types/schema'
 import { BigDecimal, Address, BigInt, log } from '@graphprotocol/graph-ts/index'
 import { ZERO_BD, factoryContract, ADDRESS_ZERO, ONE_BD, UNTRACKED_PAIRS } from './helpers'
 
-const WMATIC_ADDRESS = '0x094616F0BdFB0b526bD735Bf66Eca0Ad254ca81F'
-const MONT_ADDRESS = '0x9087f345F063b88a78b80D90Eeb1DA35288D183A'
+const WBNB_ADDRESS = '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c'
+const MONT_ADDRESS = '0x2D279FDECdf7f5705F5ff0bD80F8D9a305Ea87F4'
+const ARDM_ADDRESS = '0xE849188F76c0dA93b5eD310a1F72127914b3A7b9'
 // const MONT_WMATIC_PAIR = '0xdc13d66ee36e21d6f439847563b8504c2936c249'
 // const USDC_WETH_PAIR = '0x2b8920cBdDCc3e85753423eEceCd179cb9232554' // created 10008355
 // const DAI_WETH_PAIR = '0xaB57fAf3b573B8ac1ad90255f6cF4E92DbbcCE91' // created block 10042267
@@ -55,7 +56,7 @@ export function getEthPriceInUSD(): BigDecimal {
 let WHITELIST: string[] = [
   // '0xaf7acb54a773f6c6a4169654eaa8fad755468f50' // WMATIC
   // '0xd26adf1fb375a08760aed4a5bcdd8527c7e191b1', // ARDX
-  '0x2D9ee688D46FD1D39Eb3507BB58dCE3A3cab64D0', // ARDM
+  ARDM_ADDRESS, // ARDM
   MONT_ADDRESS // MONT
 ]
 
@@ -134,7 +135,7 @@ export function getVolumeMNT(
  * @todo update to be derived ETH (add stablecoin estimates)
  **/
 export function findEthPerToken(token: Token): BigDecimal {
-  if (token.id == WMATIC_ADDRESS) {
+  if (token.id == WBNB_ADDRESS) {
     return ONE_BD
   }
   // loop through whitelist and check if paired with any
