@@ -3,9 +3,9 @@ import { Pair, Token, Bundle } from '../types/schema'
 import { BigDecimal, Address, BigInt, log } from '@graphprotocol/graph-ts/index'
 import { ZERO_BD, factoryContract, ADDRESS_ZERO, ONE_BD, UNTRACKED_PAIRS } from './helpers'
 
-const WBNB_ADDRESS = '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c'
-const MONT_ADDRESS = '0x2D279FDECdf7f5705F5ff0bD80F8D9a305Ea87F4'
-const ARDM_ADDRESS = '0xE849188F76c0dA93b5eD310a1F72127914b3A7b9'
+const WBNB_ADDRESS = '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c'
+const MONT_ADDRESS = '0x2d279fdecdf7f5705f5ff0bd80f8d9a305ea87f4'
+const ARDM_ADDRESS = '0xe849188f76c0da93b5ed310a1f72127914b3a7b9'
 // const MONT_WMATIC_PAIR = '0xdc13d66ee36e21d6f439847563b8504c2936c249'
 // const USDC_WETH_PAIR = '0x2b8920cBdDCc3e85753423eEceCd179cb9232554' // created 10008355
 // const DAI_WETH_PAIR = '0xaB57fAf3b573B8ac1ad90255f6cF4E92DbbcCE91' // created block 10042267
